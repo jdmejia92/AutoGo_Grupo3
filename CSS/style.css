@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-:root{
+@font-face {
+    font-family: 'Amonos Display Regular';
+    src: url('/MEDIA/FONTS/amonosdisplay-regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ethnocentric Rg It';
+    src: url('/MEDIA/FONTS/Ethnocentric\ Rg\ It.otf') format('opentype');
+}
+
+:root {
     --bgfont: #222;
     --bgfontnav: #00000000;
     --white: #fff;
     --hover: #A0A300;
+    --font-amonos: 'Amonos Display Regular', sans-serif;
+    --font-ethnocentric: 'Ethnocentric Rg It', sans-serif;
+    --font-opensans: 'Open Sans', sans-serif;
+
 }
-
-
 
 * {
     box-sizing: border-box;
@@ -16,7 +28,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-opensans);
     color: var(--bgfont);
     padding-bottom: 50px;
 }
@@ -43,7 +55,9 @@ body {
     transition: all .3s ease-in-out;
 }
 
+.current,
 .nav ul {
+    font-family: var(--font-ethnocentric);
     display: flex;
     list-style-type: none;
     align-items: center;
